@@ -1,0 +1,33 @@
+.container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.box {
+	height: 150px;
+	width: 100%;
+}
+
+
+.blue {
+	background-color: blue;
+}
+.light_blue {
+	background-color: cyan;
+}
+.green {
+	background-color: green;
+}
+.red {
+	background-color: red;
+}
+.yellow {
+	background-color: yellow;
+}
+.orange {
+	background-color: orange;
+}
+.purple {
+	background-color: purple;
+}
+

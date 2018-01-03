@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Layout Shifter Example</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style type="text/css">	
+			html, body {
+				margin: 0;
+				padding: 0;
+			}
+			.box {
+				width: 100%;
+				min-height: 150px;
+			}
+			.blue {
+				background-color: #00f;
+			}
+			.light_blue {
+				background-color: #b4efef;
+			}
+			.green {
+				background-color: #0f0;
+			}
+			.red {
+				background-color: #f00;
+			}
+		</style>
+		<style>
+			.container {
+				width: 100%; /* this is so that container2 behaves properly */
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			@media screen and (min-width: 450px) {
+				#container2, .blue{
+					width: 50%;
+				}
+			}
+
+			@media screen and (min-width: 550px) {
+				.blue {
+					order: 1;
+					width: 25%;
+				}
+				.red {
+					order: -1;
+					width: 25%;
+				}
+			}
+
+
+			
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="box blue"></div>
+			<div class="container" id="container2">
+				<div class="box light_blue"></div>
+				<div class="box green"></div>
+			</div>
+			<div class="box red"></div>
+		</div>
+	</body>
+</html>
